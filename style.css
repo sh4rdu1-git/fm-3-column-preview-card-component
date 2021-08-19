@@ -1,0 +1,129 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  /* Colors */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  width: 100vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cards container */
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin: 2rem auto;
+}
+
+/* Card styling */
+.card {
+  width: 80vw;
+  padding: 3rem;
+  height: 30rem;
+}
+.card img {
+  padding-bottom: 2rem;
+}
+.card h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--very-light-gray);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.card p {
+  font-family: "Lexend Deca", sans-serif;
+  color: var(--transparent-white);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  padding-bottom: 4rem;
+}
+.card button {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--very-light-gray);
+  border-radius: 1.5rem;
+  border: none;
+  width: 9rem;
+  height: 2.5rem;
+}
+
+/* Card colors */
+.card:nth-of-type(1) {
+  background-color: var(--bright-orange);
+}
+.card:nth-of-type(2) {
+  background-color: var(--dark-cyan);
+}
+.card:nth-of-type(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+/* Buttons colors */
+.card:nth-of-type(1) button {
+  color: var(--bright-orange);
+}
+.card:nth-of-type(2) button {
+  color: var(--dark-cyan);
+}
+.card:nth-of-type(3) button {
+  color: var(--very-dark-cyan);
+}
+
+/* Button hover effects */
+.card:nth-of-type(1) button:hover {
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+.card:nth-of-type(2) button:hover {
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+.card:nth-of-type(3) button:hover {
+  border: 2px solid var(--very-light-gray);
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5rem auto;
+  }
+  .card {
+    max-width: 20rem;
+  }
+}
+
+/* Attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
